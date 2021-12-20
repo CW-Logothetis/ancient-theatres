@@ -10,6 +10,7 @@ body {
     font-family: 'Source Serif Pro', serif;
     font-size: 1rem;
     color: #D0D6F9;
+    background-color: #0F170B;
     line-height: 1.5; /* the default of 1 is too crushed. Start at 1.5 and play around*/
 }
 
@@ -56,11 +57,11 @@ p {
     left: 0%;
     right: 0%; 
     top: calc(50% - 120px/2 - 60.5px);  */
-    margin: 0;
+    margin: 0.25rem;
 
     font-weight: 400;
     font-size: 4.8rem;
-    line-height: 60px;
+    /* line-height: 60px; */
 
     color: #BCA736;
 
@@ -75,12 +76,12 @@ p {
     /* top: calc(50% - 30px/2 + 57.5px);  */
     margin: 0;
 
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 3rem;
+    /* line-height: 3rem; */
     letter-spacing: 1px;
 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero-p {
@@ -91,10 +92,10 @@ p {
     /* top: calc(50% - 20px/2 - 110.5px);  */
     margin: 0;
     
+    color:#fff;
     font-weight: 400;
-    line-height: 2rem;
+    /* line-height: 1.8rem; */
     letter-spacing: 4.5px;
-
 }
 
 .section-title {
@@ -196,7 +197,7 @@ only for template pages*/
     Smallest devices are over 300, but use 0px rather than 300px cos you never know */
     display: grid;
     grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
-    grid-column-gap: 3.2em;
+    grid-column-gap: 1.5em;
 }
 
 @media (min-width: 600px) {
@@ -403,14 +404,10 @@ only for template pages*/
 
 /* .hero is the container for image title and CTA */
 .hero {
-    /* background-image: url(img/#);
-    background-size: cover;
-    background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
     background-color: #4b7237;
     color: #fff;
 
     height: 80vh;
-    /* padding: 12.8em 0 6.4em; */
 
     text-align: center;
     position: relative; 
@@ -433,7 +430,7 @@ with the narrow first and third columns as margin */
     /* display: block; */
     position: absolute;
     
-    opacity: 0.7;
+    opacity: 0.6;
     /* top: 0; */
     left: 0; 
     width: 100%;
@@ -443,6 +440,7 @@ with the narrow first and third columns as margin */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+    /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -451,17 +449,16 @@ with the narrow first and third columns as margin */
 }
 
 .hero-text {
-    
     position: relative;
-    
-    /* position: absolute; */
-    width: 327px;
-    height: 351px;
+    /* width: 327px; */
+    /* height: 351px; */
     left: auto;
     right: auto;
-    top: 14rem;
+    top: 12rem;
     z-index: -1;
 }
+
+
 
 @media (min-width: 400px) {
     .hero > * {
@@ -487,17 +484,36 @@ with the narrow first and third columns as margin */
 .info {
     padding: 6.4em 0;
     text-align: center;
+    position: relative;
 }
+
+/* .gradient-rectangle {
+    width: 100%;
+    height: 100px;
+    top: -5rem;
+    background: linear-gradient(180.07deg, #0F170B 74.1%, rgba(15, 23, 11, 0) 99.21%);
+    mix-blend-mode: normal;
+    transform: rotate(-180deg);
+    position: absolute;
+} */
 
 .col {
     grid-column: 2 / -2;
     margin-bottom: 3em;
 }
 
-@media (min-width: 600px) {
-    /*on bigger screens want them to span across centre columns, 
+.col > p {
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+}
+
+  /*on bigger screens want them to span across centre columns, 
     but if you span 1 they'll start from tiny left column.
     the col:first child sets the first child to column 2, and then they span*/
+@media (min-width: 600px) {
+  
     .col {
         grid-column: span 1;
         margin-bottom: .5em;
@@ -507,6 +523,57 @@ with the narrow first and third columns as margin */
         grid-column: 2 / span 1;
     }
 }
+
+/* ==================
+       TIMELINE
+===================== */
+
+.timeline {
+    background-image: linear-gradient(180deg, rgba(15, 23, 11, 0.8) 1%, rgba(156, 183, 140, 0.1), rgba(15, 23, 11, 0.8) 99%);
+
+}
+
+
+.timeline-grid {
+    
+    display: grid;
+    grid-template-columns: minmax(1em, 1em) 1fr 3fr minmax(1em, 1em);
+    grid-column-gap: 1.5em;
+    /* grid-column-gap: 3.2em; */
+}
+
+.col-dates {
+
+    grid-column: 2;
+    margin: 0;
+    padding: 1em 0;
+
+    border-right: solid 3px yellow;
+}
+
+.col-details {
+
+    grid-column: 3;
+    margin: 0;
+    padding: 1em 0;
+}
+
+/* ==================
+         MAP
+===================== */
+
+.map-section {
+    background-image: url(/images/map/map-final.svg);
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: center; 
+    /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 /* ==================
     template page
