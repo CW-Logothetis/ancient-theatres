@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TITLE</title>
+        <!-- viewport meta to render pages on mobile properly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- link to google fonts -->
+        <link href="#" rel="stylesheet">
+        
+        <!-- https://cdnjs.com/libraries/font-awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+
+        <!-- link to my CSS -->
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <!-- nav bar doesn't need to be in grid , but if you do, everything aligns properly -->
+        <header class="header header-home main-grid">
+            <div class="header-content">
+                <!-- link with an image -->
+                <a class="logo-link" href="index.html">
+                    <img src="img/logo_theatre.png" alt="" class="logo">
+                </a>
+                <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+
+                <nav class="nav">
+                    <button aria-label="Close navigation" class="close-nav">&times;</button>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link current">about us</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="main-template main-grid">
+
+            <h1 class="page-title">About us.</h1>
+            <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Maxime mollitia,</strong> molestiae quas vel sint commodi</p>
+
+            <img class="main-image" src="img/about-me.jpg" alt="a man wearing goggles">
+            
+            <div class="main-text">
+                <h2 class="section-title">Sub-heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi</p>
+                <p>Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid.</p>
+                <h2 class="section-title">Sub-heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi</p>
+                <p>Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid.</p>
+            </div>
+
+        </main>
+        
+        
+        <footer class="footer main-grid"> 
+            <!-- footer in two pieces. easier to move social around -->
+            <div class="footer-main">
+                <img src="img/logo_theatre.png" alt="" class="footer-logo">
+                <p class="footer-text">Slogan or other brand text.</p>
+                <p class="footer-fineprint">© ABC and XYZ 2021</p>
+            </div>
+            <ul class="social-list">
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
