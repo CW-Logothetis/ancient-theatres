@@ -57,7 +57,7 @@ p {
     left: 0%;
     right: 0%; 
     top: calc(50% - 120px/2 - 60.5px);  */
-    margin: 0.25rem;
+    margin: 0.25em;
 
     font-weight: 400;
     font-size: 4.8rem;
@@ -333,13 +333,13 @@ only for template pages*/
 /* footer - on every page, hence me putting it in general layout */
 
 .footer {
-    background: #ebebeb;
-    padding: 4em 0;
+    background: #0F170B;
+    margin-top: 4em;
     text-align: center;
 
     grid-template-areas:
-        ". social ."
-        ". main ."; 
+        ". main ."
+        ". social ."; 
 }
 
 .footer-main,
@@ -353,8 +353,22 @@ only for template pages*/
     opacity: .3;
 }
 
+.footer-item {
+    padding: 2em, 0;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    
+}
+
 .footer-main {
     grid-area: main;
+    font-size: 1.6rem;
 }
 
 .footer-fineprint {
@@ -454,7 +468,7 @@ with the narrow first and third columns as margin */
     /* height: 351px; */
     left: auto;
     right: auto;
-    top: 12rem;
+    top: 12em;
     z-index: -1;
 }
 
@@ -482,7 +496,7 @@ with the narrow first and third columns as margin */
 ===================== */
 
 .info {
-    padding: 6.4em 0;
+    padding: 6.4em 0 3em 0;
     text-align: center;
     position: relative;
 }
@@ -503,7 +517,7 @@ with the narrow first and third columns as margin */
 }
 
 .col > p {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.5em;
     font-weight: 300;
     line-height: 2.5rem;
     letter-spacing: 1px;
@@ -529,7 +543,7 @@ with the narrow first and third columns as margin */
 ===================== */
 
 .timeline {
-    background-image: linear-gradient(180deg, rgba(15, 23, 11, 0.8) 1%, rgba(156, 183, 140, 0.1), rgba(15, 23, 11, 0.8) 99%);
+    background-image: linear-gradient(180deg, rgba(15, 23, 11, 0.5) 5%, rgba(156, 183, 140, 0.1), rgba(15, 23, 11, 0.5) 95%);
 
 }
 
@@ -565,15 +579,54 @@ with the narrow first and third columns as margin */
 .map-section {
     background-image: url(/images/map/map-final.svg);
     background-repeat: no-repeat;
-    background-attachment: absolute;
     background-position: center; 
     /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    transform: scale(1);
+
+    min-height: 70vh;
+    margin-top: 10em;
+    margin-bottom: 3em;
 }
 
+.map-text > p {
+    position: absolute;
+    /* left: 25%; */
+}
+
+.capital {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -1px -1px 2px rgba(1, 1, 1, 0.25);
+}
+
+.theatre {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05rem;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -1px -1px 2px rgba(1, 1, 1, 0.25);
+}
+
+/* Map text - text links work repsonsively? Or put text in svg and map clickable areas? */
+
+/* .tirana {
+    top: 35%;
+    left: 3.6em;
+}
+
+.apollonia {
+    top: 38%;
+    left: 4.2em;
+} */
 
 /* ==================
     template page
