@@ -45,34 +45,24 @@ p {
 }
 
 /* .accent-color {
-    color: #FFE600;
+    color: #BCA736;
 } */
 
 .hero-title {
-    /* position: absolute;*/
-    /* height: 120px;
-    left: 0%;
-    right: 0%; 
-    top: calc(50% - 120px/2 - 60.5px);  */
+
     margin: 0.25em;
 
     font-weight: 400;
     font-size: 4.8rem;
-    /* line-height: 60px; */
-
+    line-height: 8rem;
     color: #BCA736;
-
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.69);
 }
 
 .hero-subtitle {
-    /* position: absolute;
-    height: 30px;
-    left: 11.93%;
-    right: 11.93%;*/
-    /* top: calc(50% - 30px/2 + 57.5px);  */
-    margin: 0;
 
+    margin: 0;
+    padding: 0;
     font-size: 2rem;
     font-weight: 400;
     /* line-height: 3rem; */
@@ -82,13 +72,9 @@ p {
 }
 
 .hero-p {
-    /* position: absolute;
-    height: 20px;
-    left: -7.34%;
-    right: -7.34%;*/
-    /* top: calc(50% - 20px/2 - 110.5px);  */
+
     margin: 0;
-    
+    padding: 0;
     color:#fff;
     font-weight: 400;
     /* line-height: 1.8rem; */
@@ -101,11 +87,11 @@ p {
     }
 
     .hero-subtitle {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .hero-p {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -125,7 +111,7 @@ p {
     width: 60px;
     height: 3px;
     margin-top: 10px;
-    background: #FFE600; 
+    background: #BCA736; 
 }
 
 .section-title-center::after {
@@ -156,7 +142,7 @@ only for template pages*/
     display: block;
     width: 100%;
     height: 30px;
-    background: #FFE600;
+    background: #BCA736;
     margin-top: -40px;
     margin-left: 15px;
 }
@@ -182,7 +168,7 @@ only for template pages*/
 }
 
 .btn-primary {
-    background: #FFE600;
+    background: #BCA736;
     color: #000;
     /* btn is in grid, so it will stretch. Start will shrink it to size */
     justify-self: start;
@@ -190,7 +176,7 @@ only for template pages*/
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background: #ffc400;
+    background: #BCA736;
 }
 
 .btn-form {
@@ -218,6 +204,13 @@ only for template pages*/
 @media (min-width: 600px) {
     .main-grid {
         gap: 15em;
+    }
+}
+
+@media (min-width: 950px) {
+.main-grid {
+    max-width: 950px;
+    margin: 0 auto;
     }
 }
 
@@ -288,13 +281,13 @@ only for template pages*/
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #FFE600;
+    color: #BCA736;
 }
 
 .close-nav {
     border: 0;
     background: 0;
-    color: #FFE600;
+    color: #BCA736;
     font-weight: 700;
     font-size: 4rem;
     cursor: pointer;
@@ -313,7 +306,7 @@ only for template pages*/
 }
 
 .current {
-    border-bottom: 1px solid #FFE600;
+    border-bottom: 1px solid #BCA736;
 }
 
 @media (min-width: 600px) {
@@ -356,6 +349,7 @@ only for template pages*/
 .footer {
     background: #0F170B;
     margin-top: 4em;
+    margin-bottom: 6em;
     color: white;
     text-align: center;
     
@@ -472,12 +466,6 @@ only for template pages*/
     z-index: -1000;
 }
 
-/* this centres all children of .hero i.e. all of the content goes in the centre column, 
-with the narrow first and third columns as margin */
-.hero > * {
-    grid-column: 2 / -2;
-}
-
 .hero-bg-img {
     position: relative;
     z-index: -100;
@@ -488,7 +476,7 @@ with the narrow first and third columns as margin */
     display: block;
     position: absolute;
     
-    opacity: 0.5;
+    opacity: 0.7;
     /* top: 0; */
     left: 0; 
     width: 100%;
@@ -510,8 +498,7 @@ with the narrow first and third columns as margin */
     position: relative;
     /* width: 327px; */
     /* height: 351px; */
-    left: auto;
-    right: auto;
+    text-align: center;
     top: 12em;
     z-index: -1;
 }
@@ -520,31 +507,31 @@ with the narrow first and third columns as margin */
     display: none;
 }
 
-/* @media (min-width: 400px) {
-    .hero > * {
-        margin-right: 10%; 
-    }
-} */
 
 @media (min-width: 600px) {
-    /* .hero {
-        padding: 16em 0 9.6em;
-    } */
-
-    /*stops it going over bg img*/
-    /* .hero > * {      
-        grid-column: 2 / span 2; 
-    } */
 
     .hero-text {
         top: 24em;
     }
+}
 
-    .hide-mobile {
-        display: block;
+@media (min-width: 950px) {
+
+    .hero {
+        height: 90vh;
+      
     }
 
+ 
+
+    .hero-bg-img:before { 
+        height: 90vh;    
+        opacity: 0.8;
+        background-position: 0 30%; 
+       
+    }
 }
+
 
 /* ==================
     info section
@@ -578,11 +565,21 @@ with the narrow first and third columns as margin */
     letter-spacing: 1px;
 }
 
+.hide-mobile {
+    display: none;
+}
+
 @media (min-width: 600px) {
   
     .info {
+        padding: 7.2em 0 4em 0;
         text-align: left;
     }
+
+    .hide-mobile {
+        display: block;
+    }
+
 }
 
 /* ==================
@@ -608,7 +605,7 @@ with the narrow first and third columns as margin */
     margin: 0;
     padding: 1em 0;
 
-    border-right: solid 3px yellow;
+    border-right: solid 3px #BCA736;
 }
 
 .col-details {
@@ -622,6 +619,40 @@ with the narrow first and third columns as margin */
     .timeline-grid {
         grid-template-columns: minmax(1em, 1em) 1fr 1fr minmax(1em, 1em);
         column-gap: 15em;
+    }
+
+    .col-dates {
+        padding-right: 1em;
+    }
+
+    .col-details {
+        margin-left: -7em;
+    }
+
+}
+
+@media (min-width: 770px) {
+
+    .timeline-grid {
+        grid-template-columns: minmax(1em, 1em) 1fr 2fr minmax(1em, 1em);
+        column-gap: 15em;
+    }
+
+    .col-dates {
+        padding-right: 1em;
+    }
+
+    .col-details {
+        margin-left: -7em;
+    }
+
+}
+
+@media (min-width: 930px) {
+
+    .timeline-grid {
+        max-width: 950px;
+        margin: 0 auto;
     }
 
     .col-dates {
@@ -690,6 +721,31 @@ with the narrow first and third columns as margin */
     left: 4.2em;
 } */
 
+@media (min-width: 600px) {
+    .map-section {
+        background-position: bottom;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .map-section {
+        width: 90%;
+        margin: 0 auto;
+    }    
+}
+
+@media (min-width: 1600px) {
+    .map-section {
+        max-width: 1049px;
+        height: 600px;
+        background-size: contain;
+        outline: solid 3px #0F170B;
+        border-radius: 20px;
+    }    
+}
+
+
 /* ==================
     template page
 ===================== */
@@ -704,7 +760,7 @@ with the narrow first and third columns as margin */
 
 .main-image {
     margin-bottom: 2.4em;
-    box-shadow: 5px 5px 0px black, 10px 10px 0 #FFE600;
+    box-shadow: 5px 5px 0px black, 10px 10px 0 #BCA736;
 }
 
 @media (min-width: 600px) {
