@@ -95,6 +95,24 @@ p {
     letter-spacing: 4.5px;
 }
 
+@media (min-width: 600px) {
+    .hero-title {
+        font-size: 7.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 3rem;
+    }
+
+    .hero-p {
+        font-size: 2rem;
+    }
+}
+
+/* ----------------------------------
+---------- Theatre Pages ------------
+---------------------------------- */
+
 .section-title {
     font-size: 1.8rem;
     color: #000;
@@ -193,13 +211,13 @@ only for template pages*/
     /* minmax on narrow, outer columns a good start; effectively they create equal padding throughout, for easy alignment. Then 0-500 screen size. 
     Smallest devices are over 300, but use 0px rather than 300px cos you never know */
     display: grid;
-    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(0px, 500px) minmax(1em, 1fr);
     grid-column-gap: 1.5em;
 }
 
 @media (min-width: 600px) {
     .main-grid {
-        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
+        gap: 15em;
     }
 }
 
@@ -265,7 +283,7 @@ only for template pages*/
     color: #fff;
     text-decoration: none;
     font-size: 3.6rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .nav-link:hover,
@@ -278,7 +296,7 @@ only for template pages*/
     background: 0;
     color: #FFE600;
     font-weight: 700;
-    font-size: 4.8rem;
+    font-size: 4rem;
     cursor: pointer;
     padding: .8em;
     position: absolute; /*otherwise it pushes the three links down and user needs to scroll*/
@@ -311,15 +329,20 @@ only for template pages*/
 
     .nav-list {
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: flex-end;
     }
     
     .nav-item {
-        margin-left: 3.22em;
+        margin-right: 3em;
     }
     
     .nav-link {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.8rem;
+        /* identical to box height */
+        letter-spacing: 2.25px;
+        color: #FFFFFF;
     }
 
     .header-home .nav {
@@ -348,10 +371,21 @@ only for template pages*/
 }
 
 .footer-logo,
-.footer-text,
-.footer-fineprint {
+.footer-text {
     opacity: .7;
     padding: 0;
+}
+
+.footer-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* 100% height spreads the three links the length of the viewport*/
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .footer-item {
@@ -380,7 +414,7 @@ only for template pages*/
 
 .footer-fineprint {
     font-size: 1.2rem;
-    margin: 0, 0, 2em, 0;
+    opacity: 0.7;
 }
 
 .social-list {
@@ -405,7 +439,7 @@ only for template pages*/
     color: #4b7237;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
     .footer {
         grid-template-areas: 
           ". main main social ."
@@ -419,7 +453,7 @@ only for template pages*/
         justify-content: flex-end;
     }
   
-}
+} */
 
 
 /* ==================
@@ -431,7 +465,7 @@ only for template pages*/
     background-color: #4b7237;
     color: #fff;
 
-    height: 100vh;
+    height: 80vh;
 
     text-align: center;
     position: relative; 
@@ -451,14 +485,14 @@ with the narrow first and third columns as margin */
 /* Pseudo and relative/absolute positioning allows opacity. CSS doesn't have a background-opacity property */
 .hero-bg-img:before { 
     content: ' ';
-    /* display: block; */
+    display: block;
     position: absolute;
     
     opacity: 0.5;
     /* top: 0; */
     left: 0; 
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 
     background-image: url(images/Epidavros_main.jpg);
     background-repeat: no-repeat;
@@ -486,19 +520,24 @@ with the narrow first and third columns as margin */
     display: none;
 }
 
-@media (min-width: 400px) {
+/* @media (min-width: 400px) {
     .hero > * {
-        margin-right: 10%; /*bg-img issue around 600px without this*/  
+        margin-right: 10%; 
     }
-}
+} */
 
 @media (min-width: 600px) {
-    .hero {
+    /* .hero {
         padding: 16em 0 9.6em;
-    }
-    
-    .hero > * {
-        grid-column: 2 / span 2; /*stops it going over bg img*/
+    } */
+
+    /*stops it going over bg img*/
+    /* .hero > * {      
+        grid-column: 2 / span 2; 
+    } */
+
+    .hero-text {
+        top: 24em;
     }
 
     .hide-mobile {
@@ -539,18 +578,10 @@ with the narrow first and third columns as margin */
     letter-spacing: 1px;
 }
 
-  /*on bigger screens want them to span across centre columns, 
-    but if you span 1 they'll start from tiny left column.
-    the col:first child sets the first child to column 2, and then they span*/
 @media (min-width: 600px) {
   
-    .col {
-        grid-column: span 1;
-        margin-bottom: .5em;
-    }
-    
-    .col:first-child {
-        grid-column: 2 / span 1;
+    .info {
+        text-align: left;
     }
 }
 
@@ -560,7 +591,7 @@ with the narrow first and third columns as margin */
 
 .timeline {
     background-image: linear-gradient(180deg, rgba(15, 23, 11, 0.5) 5%, rgba(156, 183, 140, 0.1), rgba(15, 23, 11, 0.5) 95%);
-
+    margin-bottom: 15em;
 }
 
 
@@ -569,7 +600,6 @@ with the narrow first and third columns as margin */
     display: grid;
     grid-template-columns: minmax(1em, 1em) 1fr 3fr minmax(1em, 1em);
     grid-column-gap: 1.5em;
-    /* grid-column-gap: 3.2em; */
 }
 
 .col-dates {
@@ -582,11 +612,28 @@ with the narrow first and third columns as margin */
 }
 
 .col-details {
-
     grid-column: 3;
     margin: 0;
     padding: 1em 0;
 }
+
+@media (min-width: 600px) {
+
+    .timeline-grid {
+        grid-template-columns: minmax(1em, 1em) 1fr 1fr minmax(1em, 1em);
+        column-gap: 15em;
+    }
+
+    .col-dates {
+        padding-right: 1em;
+    }
+
+    .col-details {
+        margin-left: -7em;
+    }
+
+}
+
 
 /* ==================
          MAP
@@ -604,7 +651,6 @@ with the narrow first and third columns as margin */
     transform: scale(1);
 
     min-height: 70vh;
-    margin-top: 10em;
     margin-bottom: 3em;
 }
 
