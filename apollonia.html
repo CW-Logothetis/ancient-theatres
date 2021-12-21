@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+        <!-- viewport meta to render pages on mobile properly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- link to google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Source+Serif+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        
+        <!-- https://cdnjs.com/libraries/font-awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+
+        <!-- link to my CSS -->
+        <link href="style.css" rel="stylesheet">
+        <title>Ancient Theatres of Albania and Greece</title>
+    </head>
+        
+        <!-- nav bar doesn't need to be in grid, a bit overkill, but keeps everything aligned properly -->
+        <header class="header header-home main-grid">
+            <div class="header-content">
+                <!-- link with an image -->
+                <a class="logo-link" href="index.html">
+                    <img src="images/logo-vector.svg" alt="" class="logo">
+                </a>
+                <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+
+                <nav class="nav">
+                    <button aria-label="Close navigation" class="close-nav">&times;</button>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link current">HOME</a></li>
+                        <li class="nav-item"><a href="apollonia.html" class="nav-link">Apollonia</a></li>
+                        <li class="nav-item"><a href="byllis.html" class="nav-link">Byllis</a></li>
+                        <li class="nav-item"><a href="delphi.html" class="nav-link">Delphi</a></li>
+                        <li class="nav-item"><a href="dodoni.html" class="nav-link">Dodoni</a></li>
+                        <li class="nav-item"><a href="epidavros.html" class="nav-link">Epidavros</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+
+            <!-- hero  -->
+            <section class="hero">
+                <!-- hero-bg-img = relative for opacity -->
+                <div class="hero-bg-img">
+                    <div class="hero-text">
+                        <!-- give h1 class cos h1 on other pages will be different -->
+                        <p class="hero-p">EXPLORE THE</p>
+                        <h1 class="hero-title">ANCIENT</br>THEATRES</h1>
+                        <h2 class="hero-subtitle sans">of ALBANIA and GREECE</h2>
+                    </div>
+                </div>
+
+                <!-- buttons all the same at the mo, but two classes in case site grows -->
+                
+            </section>
+        
+            <!-- INTRO TEXT -->
+            
+            
+            <section class="info main-grid">
+                <div class="gradient-rectangle"></div>
+                <div class="col">
+                    <p>Although seated areas existed in Minoan times (2500-1600 BC), the tradition of ancient Greek theatre began around 700BC.</p>
+                    <p>Yet it wasn't until 450BC-350BC that the enormous stone theatres that remain today were constructed for performances. </p>
+                    <p class="hide-mobile">They would soon hold large gatherings - as well as drama - and no doubt "witnessed the birth of democracy".</p>
+                    <p class="hide-mobile">Later, during the Hellenistic period (after Alexander the Great) the theatres were adapted to host Games, together with new stadia. </p>
+                    <p>And as time passed and the Romans conquered the region, existing buildings were expanded and many new ones built.</p>
+                    <p>But here, we look at some of our favourite ancient Greek theatres</p>
+                </div>
+            </section>
+
+            <!-- TIMELINE -->
+            <section class="timeline">
+                <div class="timeline-grid">
+                <p class="col-dates">700 BC</p>
+                <p class="col-details">beginnings of ancient Greek theatre</p>
+                <p class="col-dates">550 BC - 220 BC</p>
+                <p class="col-details">peak of ancient Greek theatre</p>
+                <p class="col-dates">499 BC</p>
+                <p class="col-details">theatre performed in Athens at the Sanctuary of Dionysus</p>
+                <p class="col-dates">late 4th BC</p>
+                <p class="col-details">beginnings of stone theatre at Epidavros</p>
+                <p class="col-dates">4th BC</p>
+                <p class="col-details">beginnings of stone theatre at Delphi</p>
+                <p class="col-dates">late 3rd BC</p>
+                <p class="col-details">theatre at Dodoni, possibly ordered by King Pyrrhus for the Naia Games</p>
+                <p class="col-dates">mid 3rd BC</p>
+                <p class="col-details">theatres further north at Byllis and Apollonia (modern-day Albania)</p>
+                </div>
+            </section>
+
+            <!-- MAP -->
+            <section class="map-section">
+                <div class="map-text">
+                    <!-- <p class="capital tirana">Tirana</p>
+                    <p class="theatre apollonia">Apollonia</p> -->
+                    <!-- <p class="theatre byllis">Byllis</p>
+                    <p class="capital thess">Thessaloniki</p>
+                    <p class="theatre dodoni">Dodoni</p>
+                    <p class="theatre delphi">Delphi</p>
+                    <p class="capital athens">Athens</p>
+                    <p class="theatre epidavros">Epidavros</p> -->
+                </div>
+            </section>
+
+        </main>
+        
+        
+        <footer class="footer mainfooter-link">
+            <!-- footer in two pieces. easier to move social around -->
+
+            <div class="footer-main">
+                <img src="" alt="" class="footer-logo">
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="index.html" class="footer-link current">HOME</a></li>
+                    <li class="footer-item"><a href="apollonia.html" class="footer-link">Apollonia</a></li>
+                    <li class="footer-item"><a href="byllis.html" class="footer-link">Byllis</a></li>
+                    <li class="footer-item"><a href="delphi.html" class="footer-link">Delphi</a></li>
+                    <li class="footer-item"><a href="dodoni.html" class="footer-link">Dodoni</a></li>
+                    <li class="footer-item"><a href="epidavros.html" class="footer-link">Epidavros</a></li>
+                </ul>
+                
+            </div>
+            <ul class="social-list">
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-github"></i></a></li>
+            </ul>
+
+            <div>
+                <p class="footer-text">Ancient Theatres of Albania and Greece</p>
+                <p class="footer-fineprint">CW Logothetis 2021</p>
+            </div>
+
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
