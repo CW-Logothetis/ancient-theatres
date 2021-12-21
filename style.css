@@ -197,19 +197,13 @@ only for template pages*/
     /* minmax on narrow, outer columns a good start; effectively they create equal padding throughout, for easy alignment. Then 0-500 screen size. 
     Smallest devices are over 300, but use 0px rather than 300px cos you never know */
     display: grid;
-    grid-template-columns: 4em minmax(0px, 500px) minmax(0px, 500px) 4em;
-    /* grid-column-gap: 1.5em; */
-}
-
-@media (min-width: 500px) {
-    .main-grid {
-        grid-template-columns: 15% minmax(0px, 500px) minmax(0px, 500px) 15%;
-    }
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(0px, 500px) minmax(1em, 1fr);
+    grid-column-gap: 1.5em;
 }
 
 @media (min-width: 600px) {
     .main-grid {
-        /* gap: 15em; */
+        gap: 15em;
     }
 }
 
@@ -537,7 +531,7 @@ only for template pages*/
 
 .info {
     padding: 6.4em 0 3em 0;
-    text-align: left;
+    text-align: center;
     position: relative;
 }
 
@@ -567,8 +561,6 @@ only for template pages*/
     display: none;
 }
 
-
-
 @media (min-width: 600px) {
   
     .info {
@@ -595,15 +587,15 @@ only for template pages*/
 .timeline-grid {
     
     display: grid;
-    grid-template-columns: 4em 22% 55% 4em;
-    /* grid-column-gap: 1.5em; */
+    grid-template-columns: minmax(1em, 1em) 1fr 3fr minmax(1em, 1em);
+    grid-column-gap: 1.5em;
 }
 
 .col-dates {
 
     grid-column: 2;
     margin: 0;
-    padding: 1em 0.3em 1em 0;
+    padding: 1em 0;
 
     border-right: solid 3px #BCA736;
 }
@@ -611,48 +603,56 @@ only for template pages*/
 .col-details {
     grid-column: 3;
     margin: 0;
-    padding: 1em 0 1em 1em;
-}
-
-@media (min-width: 500px) {
-    .timeline-grid {
-        grid-template-columns: 15% 20% 50% 15%;
-    }
+    padding: 1em 0;
 }
 
 @media (min-width: 600px) {
-    .col-dates {
-        padding: 1em 10% 1em 0;
-}
-
-    .col-details {
-        padding: 1em 0 1em 10%;
-    }
-
-
-@media (min-width: 750px) {
 
     .timeline-grid {
-        grid-template-columns: 15% 18% 52% 15%;
-        /* column-gap: 15em; */
+        grid-template-columns: minmax(1em, 1em) 1fr 1fr minmax(1em, 1em);
+        column-gap: 15em;
     }
 
     .col-dates {
-        padding: 1em 0 1em 0;
-}
+        padding-right: 1em;
+    }
 
     .col-details {
-        padding: 1em 0 1em 10%;
+        margin-left: -7em;
     }
 
 }
 
-@media (min-width: 880px) {
+@media (min-width: 770px) {
 
     .timeline-grid {
-        grid-template-columns: 15% 15% 55% 15%;
+        grid-template-columns: minmax(1em, 1em) 1fr 2fr minmax(1em, 1em);
+        column-gap: 15em;
+    }
+
+    .col-dates {
+        padding-right: 1em;
+    }
+
+    .col-details {
+        margin-left: -7em;
+    }
+
+}
+
+@media (min-width: 930px) {
+
+    .timeline-grid {
         max-width: 950px;
         margin: 0 auto;
+    }
+
+    .col-dates {
+        padding-right: 1em;
+    }
+
+    .col-details {
+        margin-left: -7em;
     }
 
 }
@@ -747,153 +747,120 @@ only for template pages*/
 =============================================================================================================== */
 
 .theatre-hero {
-    background-image: url(images/Apollonia_05.jpg);
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-position: center; 
-    /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    /* fallback colour */
-    background-color: #4b7237;
-
-    height: 40vh;
-
-    color: #fff;
-    text-align: center;
-    position: relative; 
-    z-index: -1000;
-}
-
-/* .hero-bg-img {
-    position: relative;
-    z-index: -100;
-} */
-/* Pseudo and relative/absolute positioning allows opacity. CSS doesn't have a background-opacity property */
-.hero-bg-img:before { 
-    content: ' ';
-    display: block;
-    position: absolute;
+        background-color: #4b7237;
+        color: #fff;
     
-    opacity: 0.7;
-    /* top: 0; */
-    left: 0; 
-    width: 100%;
-    height: 80vh;
-
-    background-image: url(images/Epidavros_main.jpg);
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-position: center; 
-    /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    z-index: -10;
-}
-
-
-
-
-@media (min-width: 600px) {
-    .hero-text {
-        top: 24em;
+        height: 80vh;
+    
+        text-align: center;
+        position: relative; 
+        z-index: -1000;
     }
-}
-
-@media (min-width: 950px) {
-    .hero {
-        height: 90vh;
-      
+    
+    .theatre-hero-bg-img {
+        position: relative;
+        z-index: -100;
     }
-
-    .hero-bg-img:before { 
-        height: 90vh;    
-        opacity: 0.8;
-        background-position: 0 30%; 
-       
+    /* Pseudo and relative/absolute positioning allows opacity. CSS doesn't have a background-opacity property */
+    .theatre-hero-bg-img:before { 
+        content: ' ';
+        display: block;
+        position: absolute;
+        
+        opacity: 0.7;
+        /* top: 0; */
+        left: 0; 
+        width: 100%;
+        height: 80vh;
+    
+        background-image: url(images/Apollonia_01.jpg);
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-position: center; 
+        /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        z-index: -10;
     }
-}
-
-
-/* .main-template {
-    padding: 6.4em 0;
-}
-
-.main-template > * {
-    grid-column: 2 / -2; 
-}
-
-.main-image {
-    margin-bottom: 2.4em;
-    box-shadow: 5px 5px 0px black, 10px 10px 0 #BCA736;
-} */
+    
+    .theatre-hero-text {
+        position: relative;
+        /* width: 327px; */
+        /* height: 351px; */
+        text-align: center;
+        top: 25em;
+        z-index: -1;
+    }
+    
+    .hide-mobile {
+        display: none;
+    }
+    
+    
+    @media (min-width: 600px) {
+    
+        .hero-text {
+            top: 24em;
+        }
+    }
+    
+    @media (min-width: 950px) {
+    
+        .hero {
+            height: 90vh;
+          
+        }
+    
+     
+    
+        .hero-bg-img:before { 
+            height: 90vh;    
+            opacity: 0.8;
+            background-position: 0 30%; 
+           
+        }
+    }
 
 
 /* ============================================================================================================
     Tabs
 =============================================================================================================== */
 
-.theatre-title {
-    grid-column: 2/-2;
-    grid-row: 1;
-    
-    
-    color: #BCA736;
-    font-size: 4.6rem;
-    font-weight: 600;
-    text-align: center;
-
-    margin: 0.2em 0;
-}
-
 .tab {
-    grid-column: 2/-2;
-    grid-row: 2;
-    display: flex;
-    justify-content: space-evenly;
     overflow: hidden;
-    /* border: 1px solid #ccc; */
-    background-color: #0F170B;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
   }
   
   .tab button {
     background-color: inherit;
-    color: #ddd;
-    font-family: "Source Sans Pro", sans-serif;
-    /* float: left; */
+    float: left;
     border: none;
-    /* outline: none; */
+    outline: none;
     cursor: pointer;
-    padding: 1em 0px;
+    padding: 14px 16px;
     transition: 0.3s;
   }
 
   .tab button:hover {
-    background-color: #4b7237;
+    background-color: #ddd;
   }
 
   .tab button.active {
-    color: #ddd;
-    border-bottom: solid 4px #BCA736;
+    background-color: #ccc;
   }
   
   .tabcontent {
-    grid-row: 3;
-    grid-column: 2 / -2;
     display: none;
-    padding: 3em 0;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
   }
 
-  .start-tab {
-    display: block;
-  }
 
-
+  
 /* ==================
     form
 ===================== */
