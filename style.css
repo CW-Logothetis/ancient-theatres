@@ -48,9 +48,6 @@ p {
     color: #FFE600;
 } */
 
-
-
-
 .hero-title {
     /* position: absolute;*/
     /* height: 120px;
@@ -210,6 +207,7 @@ only for template pages*/
 
 .header {
     background-color: #0F170B;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .header-home {
@@ -266,7 +264,7 @@ only for template pages*/
 .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 4.8rem;
+    font-size: 3.6rem;
     font-weight: 700;
 }
 
@@ -357,7 +355,7 @@ only for template pages*/
 }
 
 .footer-item {
-    padding: 2em, 0;
+    line-height: 3rem;
 }
 
 .footer-link {
@@ -396,7 +394,7 @@ only for template pages*/
 
 .social-link {
     color: #fff;
-    font-size: 2.8rem;
+    font-size: 2rem;
     opacity: 0.7;
 
     margin: 0 .8em;
@@ -589,7 +587,7 @@ with the narrow first and third columns as margin */
 ===================== */
 
 .map-section {
-    background-image: url(/images/map/map-final.svg);
+    background-image: url(/images/map-final.svg);
     background-repeat: no-repeat;
     background-position: center; 
     /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
