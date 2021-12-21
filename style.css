@@ -431,7 +431,7 @@ only for template pages*/
     background-color: #4b7237;
     color: #fff;
 
-    height: 80vh;
+    height: 100vh;
 
     text-align: center;
     position: relative; 
@@ -454,15 +454,15 @@ with the narrow first and third columns as margin */
     /* display: block; */
     position: absolute;
     
-    opacity: 0.6;
+    opacity: 0.5;
     /* top: 0; */
     left: 0; 
     width: 100%;
-    height: 80vh;
+    height: 100vh;
 
     background-image: url(images/Epidavros_main.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center; 
     /*background-position: bottom; Put bg-img to cover under Nav too. Maybe change this back here and have no opacity on navbar?*/
     -webkit-background-size: cover;
@@ -482,7 +482,9 @@ with the narrow first and third columns as margin */
     z-index: -1;
 }
 
-
+.hide-mobile {
+    display: none;
+}
 
 @media (min-width: 400px) {
     .hero > * {
@@ -497,6 +499,10 @@ with the narrow first and third columns as margin */
     
     .hero > * {
         grid-column: 2 / span 2; /*stops it going over bg img*/
+    }
+
+    .hide-mobile {
+        display: block;
     }
 
 }
