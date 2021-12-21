@@ -197,13 +197,19 @@ only for template pages*/
     /* minmax on narrow, outer columns a good start; effectively they create equal padding throughout, for easy alignment. Then 0-500 screen size. 
     Smallest devices are over 300, but use 0px rather than 300px cos you never know */
     display: grid;
-    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(0px, 500px) minmax(1em, 1fr);
-    grid-column-gap: 1.5em;
+    grid-template-columns: 4em minmax(0px, 500px) minmax(0px, 500px) 4em;
+    /* grid-column-gap: 1.5em; */
+}
+
+@media (min-width: 500px) {
+    .main-grid {
+        grid-template-columns: 15% minmax(0px, 500px) minmax(0px, 500px) 15%;
+    }
 }
 
 @media (min-width: 600px) {
     .main-grid {
-        gap: 15em;
+        /* gap: 15em; */
     }
 }
 
@@ -531,7 +537,7 @@ only for template pages*/
 
 .info {
     padding: 6.4em 0 3em 0;
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 
@@ -561,6 +567,8 @@ only for template pages*/
     display: none;
 }
 
+
+
 @media (min-width: 600px) {
   
     .info {
@@ -587,15 +595,15 @@ only for template pages*/
 .timeline-grid {
     
     display: grid;
-    grid-template-columns: minmax(1em, 1em) 1fr 3fr minmax(1em, 1em);
-    grid-column-gap: 1.5em;
+    grid-template-columns: 4em 22% 55% 4em;
+    /* grid-column-gap: 1.5em; */
 }
 
 .col-dates {
 
     grid-column: 2;
     margin: 0;
-    padding: 1em 0;
+    padding: 1em 0.3em 1em 0;
 
     border-right: solid 3px #BCA736;
 }
@@ -603,56 +611,48 @@ only for template pages*/
 .col-details {
     grid-column: 3;
     margin: 0;
-    padding: 1em 0;
+    padding: 1em 0 1em 1em;
+}
+
+@media (min-width: 500px) {
+    .timeline-grid {
+        grid-template-columns: 15% 20% 50% 15%;
+    }
 }
 
 @media (min-width: 600px) {
+    .col-dates {
+        padding: 1em 10% 1em 0;
+}
+
+    .col-details {
+        padding: 1em 0 1em 10%;
+    }
+
+
+@media (min-width: 750px) {
 
     .timeline-grid {
-        grid-template-columns: minmax(1em, 1em) 1fr 1fr minmax(1em, 1em);
-        column-gap: 15em;
+        grid-template-columns: 15% 18% 52% 15%;
+        /* column-gap: 15em; */
     }
 
     .col-dates {
-        padding-right: 1em;
-    }
+        padding: 1em 0 1em 0;
+}
 
     .col-details {
-        margin-left: -7em;
+        padding: 1em 0 1em 10%;
     }
 
 }
 
-@media (min-width: 770px) {
+@media (min-width: 880px) {
 
     .timeline-grid {
-        grid-template-columns: minmax(1em, 1em) 1fr 2fr minmax(1em, 1em);
-        column-gap: 15em;
-    }
-
-    .col-dates {
-        padding-right: 1em;
-    }
-
-    .col-details {
-        margin-left: -7em;
-    }
-
-}
-
-@media (min-width: 930px) {
-
-    .timeline-grid {
+        grid-template-columns: 15% 15% 55% 15%;
         max-width: 950px;
         margin: 0 auto;
-    }
-
-    .col-dates {
-        padding-right: 1em;
-    }
-
-    .col-details {
-        margin-left: -7em;
     }
 
 }
@@ -747,7 +747,7 @@ only for template pages*/
 =============================================================================================================== */
 
 .theatre-hero {
-    background-image: url(images/Apollonia_01.jpg);
+    background-image: url(images/Apollonia_05.jpg);
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center; 
@@ -760,7 +760,7 @@ only for template pages*/
     /* fallback colour */
     background-color: #4b7237;
 
-    height: 80vh;
+    height: 40vh;
 
     color: #fff;
     text-align: center;
@@ -796,14 +796,7 @@ only for template pages*/
     z-index: -10;
 }
 
-.hero-text {
-    position: relative;
-    /* width: 327px; */
-    /* height: 351px; */
-    text-align: center;
-    top: 12em;
-    z-index: -1;
-}
+
 
 
 @media (min-width: 600px) {
@@ -845,39 +838,62 @@ only for template pages*/
     Tabs
 =============================================================================================================== */
 
+.theatre-title {
+    grid-column: 2/-2;
+    grid-row: 1;
+    
+    
+    color: #BCA736;
+    font-size: 4.6rem;
+    font-weight: 600;
+    text-align: center;
+
+    margin: 0.2em 0;
+}
+
 .tab {
+    grid-column: 2/-2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-evenly;
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    /* border: 1px solid #ccc; */
+    background-color: #0F170B;
   }
   
   .tab button {
     background-color: inherit;
-    float: left;
+    color: #ddd;
+    font-family: "Source Sans Pro", sans-serif;
+    /* float: left; */
     border: none;
-    outline: none;
+    /* outline: none; */
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 1em 0px;
     transition: 0.3s;
   }
 
   .tab button:hover {
-    background-color: #ddd;
+    background-color: #4b7237;
   }
 
   .tab button.active {
-    background-color: #ccc;
+    color: #ddd;
+    border-bottom: solid 4px #BCA736;
   }
   
   .tabcontent {
+    grid-row: 3;
+    grid-column: 2 / -2;
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    padding: 3em 0;
+  }
+
+  .start-tab {
+    display: block;
   }
 
 
-  
 /* ==================
     form
 ===================== */
