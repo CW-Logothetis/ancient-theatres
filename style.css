@@ -335,7 +335,9 @@ only for template pages*/
 .footer {
     background: #0F170B;
     margin-top: 4em;
+    color: white;
     text-align: center;
+    
 
     grid-template-areas:
         ". main ."
@@ -350,7 +352,8 @@ only for template pages*/
 .footer-logo,
 .footer-text,
 .footer-fineprint {
-    opacity: .3;
+    opacity: .7;
+    padding: 0;
 }
 
 .footer-item {
@@ -360,9 +363,11 @@ only for template pages*/
 .footer-link {
     color: #fff;
     text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
+
+    opacity: 0.8;
     
 }
 
@@ -371,28 +376,35 @@ only for template pages*/
     font-size: 1.6rem;
 }
 
+.footer-text{
+    margin: 0;
+}
+
 .footer-fineprint {
     font-size: 1.2rem;
-    margin-top: 4em;
+    margin: 0, 0, 2em, 0;
 }
 
 .social-list {
     grid-area: social;
     list-style: none;
     padding: 0;
-    margin: 0 0 3.2em;
+    margin: 3.2em;
     display: flex;
     justify-content: center;
 }
 
 .social-link {
-    color: #000;
+    color: #fff;
     font-size: 2.8rem;
+    opacity: 0.7;
+
     margin: 0 .8em;
 }
 
-.social-link:hover {
-    color: #777;
+.social-link:hover
+.social-link:focus {
+    color: #4b7237;
 }
 
 @media (min-width: 600px) {
@@ -598,7 +610,7 @@ with the narrow first and third columns as margin */
 }
 
 .capital {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Source Serif Pro', serif;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.05rem;
@@ -606,7 +618,7 @@ with the narrow first and third columns as margin */
 }
 
 .theatre {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Source Serif Pro', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
