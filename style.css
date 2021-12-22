@@ -933,24 +933,28 @@ only for template pages*/
   .prev,
   .next {
     cursor: pointer;
-    position: absolute;
-    top: 25%;
+    /* position: absolute;
+    top: 25%; */
     width: auto;
-    padding: 16px;
-    margin-top: -50px;
+    /* padding: 16px;
+    margin-top: -50px; */
+
+    padding: 0;
+    margin: 0;
+
     color: white;
     font-weight: bold;
     font-size: 20px;
-    border-radius: 0 3px 3px 0;
+    /* border-radius: 0 3px 3px 0; */
     user-select: none;
     -webkit-user-select: none;
   }
   
   /* Position the "next button" to the right */
-  .next {
+  /* .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+  } */
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
@@ -969,6 +973,9 @@ only for template pages*/
   
   /* Container for image text */
   .caption-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
     background-color: #0F170B;
     /* padding: 2px 16px; */
