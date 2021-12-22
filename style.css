@@ -858,6 +858,8 @@ only for template pages*/
   
   .tabcontent {
     display: none;
+    width: 70%;
+    margin: 0 auto;
     padding: 3em 0;
   }
 
@@ -865,7 +867,24 @@ only for template pages*/
     display: block;
 }
 
-  
+.map-responsive{
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+
+}
+
+.map-responsive iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 8px;
+}
+
+
 /* ==================
     form
 ===================== */
