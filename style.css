@@ -312,7 +312,7 @@ only for template pages*/
     cursor: pointer;
     padding: .8em;
     margin-left: auto;
-    font-size: 2.4em;
+    font-size: 3rem;
 }
 
 .current {
@@ -768,7 +768,7 @@ only for template pages*/
 =============================================================================================================== */
 
 .theatre-hero {
-    background-image: url(images/Apollonia_03.jpg);
+    background-image: url(images/Apollonia_04.jpg);
     background-repeat: no-repeat;
     background-position: center; 
     /* background-attachment: fixed; */
@@ -814,6 +814,28 @@ only for template pages*/
 }
 
 @media (min-width: 900px) {
+    .theatre-hero {
+        width: 100%;
+        height: 80vh;
+    } 
+
+    .theatre-hero-text {
+        font-size: 12rem;
+    }
+}
+
+@media (min-width: 1250px) {
+    .theatre-hero {
+        width: 100%;
+        height: 70vh;
+    } 
+
+    .theatre-hero-text {
+        font-size: 12rem;
+    }
+}
+
+@media (min-width: 1400px) {
     .theatre-hero {
         width: 100%;
         height: 80vh;
@@ -878,9 +900,11 @@ only for template pages*/
     display: block;
 }
 
-@media (mind-width: 400px) {
+@media (min-width: 750px) {
     
-
+    .tabcontent {
+        width: 60%;
+      }
 
 }
 
@@ -1007,3 +1031,11 @@ only for template pages*/
   .demo:hover {
     opacity: 1;
   }
+
+  @media (min-width: 750px) {
+    
+    .demo {
+        height: 14em;
+      }
+
+}
