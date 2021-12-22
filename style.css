@@ -890,10 +890,8 @@ only for template pages*/
     flex-direction: column;
     justify-content: center;
     width: 85%;
-    margin: 5em auto;
+    margin: 1em auto 5em auto;
     padding: 1em;
-
-    
 }
 
 .tab {
@@ -951,6 +949,7 @@ only for template pages*/
     .tab-flexbox {
         border: solid 2px #BCA736;
         border-radius: 20px;
+        margin: 5em auto;
       }
 
 }
@@ -959,6 +958,7 @@ only for template pages*/
     
     .tab-flexbox {
         width: 70%;
+        
       }
 
 }
