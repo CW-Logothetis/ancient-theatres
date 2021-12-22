@@ -786,6 +786,9 @@ only for template pages*/
     height: 70vh;
 
     position: relative;
+    z-index: -100;
+
+
 }
 
 .theatre-hero-text-apollonia {        
@@ -796,8 +799,8 @@ only for template pages*/
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
-
+    
+    z-index: -10;
     /* margin: 0.2em 0; */
 }
 
@@ -806,6 +809,8 @@ only for template pages*/
     opacity: 1;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.69), 
     2px 2px 4px rgba(0, 0, 0, 0.4);
+
+    z-index: -1;
 }
 
 @media (min-width: 900px) {
