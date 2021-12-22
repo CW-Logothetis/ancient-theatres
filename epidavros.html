@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+        <!-- viewport meta to render pages on mobile properly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- link to google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Source+Serif+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        
+        <!-- https://cdnjs.com/libraries/font-awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+
+        <!-- link to my CSS -->
+        <link href="style.css" rel="stylesheet">
+        <title>Ancient Theatres of Albania and Greece</title>
+    </head>
+        
+        <!-- nav bar doesn't need to be in grid, a bit overkill, but keeps everything aligned properly -->
+        <header class="header header-home main-grid">
+            <div class="header-content">
+                <!-- link with an image -->
+                <a class="logo-link" href="index.html">
+                    <img src="images/logo-vector.svg" alt="" class="logo">
+                </a>
+                <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+
+                <nav class="nav">
+                    <button aria-label="Close navigation" class="close-nav">&times;</button>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                        <li class="nav-item"><a href="apollonia.html" class="nav-link">Apollonia</a></li>
+                        <li class="nav-item"><a href="byllis.html" class="nav-link">Byllis</a></li>
+                        <li class="nav-item"><a href="delphi.html" class="nav-link">Delphi</a></li>
+                        <li class="nav-item"><a href="dodoni.html" class="nav-link">Dodoni</a></li>
+                        <li class="nav-item"><a href="epidavros.html" class="nav-link current">Epidavros</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+
+            <!-- hero  -->
+            <section class="theatre-hero hero-epidavros">
+                <!-- hero-bg-img = relative for opacity -->
+                <div class="theatre-hero-bg-img">
+                    <div class="theatre-hero-text epidavros-header">
+                        <h1 class="hero-title">EPIDAVROS</h1>
+                    </div>
+                </div>
+
+            </section>
+
+            
+        
+            <!-- TABS -->
+            <section class="tab-flexbox">
+                <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'History')" id="default-open">History</button>
+                    <button class="tablinks" onclick="openTab(event, 'Directions')">Directions</button>
+                    <button class="tablinks" onclick="openTab(event, 'Photos')">Photos</button>
+                </div>
+                
+                <!-- Tab content -->
+                <div id="History" class="tabcontent">
+                    <h2>Brief history</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur dipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! 
+
+                    <p>Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia.</p>
+                    
+                    <p>Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                    recusandae alias error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt dolorem!</p>
+                    
+                    <p>Officiis iure rerum voluptates a cumque velit quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur fugiat, temporibus enim commodi iusto libero magni deleniti quod quam consequuntur!</p>
+                </div>
+                
+                <div id="Directions" class="tabcontent">
+                    <h2>How to get here</h2>
+
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.206844752011!2d19.46862724490686!3d40.72223840942735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8ac4bf95da6a4ed!2sApollonia%20-%20The%20Theatre!5e1!3m2!1sen!2sgr!4v1640132461143!5m2!1sen!2sgr" 
+                         width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <div>
+                    <h3>FROM TIRANA</h3>
+
+                        <p>The highway from Athens to Corinth (tolls) is the best option and from there you have two choices:</p>
+                        <ul>
+                            <li>Coastal road (10) to Palaia Epidavros and then road 70 to the ancient city</li>
+                            <li>Visit ancient Corinth and then take the old Corinth-Argos road that passes Ancient Mycenae (a must visit). Consider stops in Argos and Nafplio (modern Greece’s first capital) before joining road 70 to Ancient Epidavros.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>FROM IOANNINA, Greece</h3>
+    
+                            <p>The highway from Athens to Corinth (tolls) is the best option and from there you have two choices:</p>
+                            <ul>
+                                <li>Coastal road (10) to Palaia Epidavros and then road 70 to the ancient city</li>
+                                <li>Visit ancient Corinth and then take the old Corinth-Argos road that passes Ancient Mycenae (a must visit). Consider stops in Argos and Nafplio (modern Greece’s first capital) before joining road 70 to Ancient Epidavros.</li>
+                            </ul>
+                    </div>
+                </div>
+                
+                <div id="Photos" class="tabcontent">
+                    <!-- <h2>Photo gallery</h2> -->
+                    
+                    <!-- Container for the image gallery -->
+                    <div class="photo-container">
+
+                        <!-- Full-width images with number text -->
+                        <div class="photographs">
+                        <div class="numbertext">1 / 6</div>
+                            <img src="images/Epidavros_02.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="photographs">
+                        <div class="numbertext">2 / 6</div>
+                            <img src="images/Epidavros_main.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="photographs">
+                        <div class="numbertext">3 / 6</div>
+                            <img src="images/Epidavros_03.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="photographs">
+                        <div class="numbertext">4 / 6</div>
+                            <img src="images/Epidavros_04.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="photographs">
+                        <div class="numbertext">5 / 6</div>
+                            <img src="images/Epidavros_05.jpg" style="width:100%">
+                        </div>
+                    
+                        <div class="photographs">
+                        <div class="numbertext">6 / 6</div>
+                            <img src="images/Epidavros_06.jpg" style="width:100%">
+                        </div>
+                    
+                        
+                        
+                        
+                    
+                        <!-- Image text --> <!-- Next and previous buttons -->
+                        <div class="caption-container">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <p id="caption"></p>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                    
+                        <!-- Thumbnail images -->
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/Epidavros_02.jpg" style="width:100%" onclick="currentSlide(1)" alt="Theatre of Epidavros">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/Epidavros_main.jpg" style="width:100%" onclick="currentSlide(2)" alt="Theatre of Epidavros">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/Epidavros_03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Inside the ancient city">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/Epidavros_04.jpg" style="width:100%" onclick="currentSlide(4)" alt="Inside the ancient city">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/Epidavros_05.jpg" style="width:100%" onclick="currentSlide(5)" alt="The Stadium">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/Epidavros_06.jpg" style="width:100%" onclick="currentSlide(6)" alt="A lizard hiding in an old olive tree">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+          
+
+            <!-- MAP -->
+            <section class="map-section">
+                <div class="map-text">
+                    <!-- <p class="capital tirana">Tirana</p>
+                    <p class="theatre apollonia">Apollonia</p> -->
+                    <!-- <p class="theatre byllis">Byllis</p>
+                    <p class="capital thess">Thessaloniki</p>
+                    <p class="theatre dodoni">Dodoni</p>
+                    <p class="theatre delphi">Delphi</p>
+                    <p class="capital athens">Athens</p>
+                    <p class="theatre epidavros">Epidavros</p> -->
+                </div>
+            </section>
+
+        </main>
+        
+        
+        <footer class="footer mainfooter-link">
+            <!-- footer in two pieces. easier to move social around -->
+
+            <div class="footer-main">
+                <img src="" alt="" class="footer-logo">
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="index.html" class="footer-link">HOME</a></li>
+                    <li class="footer-item"><a href="apollonia.html" class="footer-link">Apollonia</a></li>
+                    <li class="footer-item"><a href="byllis.html" class="footer-link">Byllis</a></li>
+                    <li class="footer-item"><a href="delphi.html" class="footer-link">Delphi</a></li>
+                    <li class="footer-item"><a href="dodoni.html" class="footer-link">Dodoni</a></li>
+                    <li class="footer-item"><a href="epidavros.html" class="footer-link current">Epidavros</a></li>
+                </ul>
+                
+            </div>
+            <ul class="social-list">
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-item"><a href="#" class="social-link"><i class="fab fa-github"></i></a></li>
+            </ul>
+
+            <div>
+                <p class="footer-text">Ancient Theatres of Albania and Greece</p>
+                <p class="footer-fineprint">CW Logothetis 2021</p>
+            </div>
+
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

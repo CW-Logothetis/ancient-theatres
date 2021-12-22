@@ -804,7 +804,6 @@ only for template pages*/
 =============================================================================================================== */
 
 .theatre-hero {
-    background-image: url(images/Apollonia_04.jpg);
     background-repeat: no-repeat;
     background-position: center; 
     -webkit-background-size: cover;
@@ -831,12 +830,18 @@ only for template pages*/
 }
 
 .hero-delphi {
-    background-image: url(images/Byllis_05.jpg);
+    background-image: url(images/Delphi_0-6.jpg);
 }
 
+.hero-dodoni {
+    background-image: url(images/Dodoni_04.jpg);
+}
 
+.hero-epidavros {
+    background-image: url(images/Epidavros_main.jpg);
+}
 
-.theatre-hero-text-apollonia {        
+.theatre-hero-text {        
     font-size: 8.2rem;
     font-weight: 600;
     text-align: center;
@@ -849,17 +854,34 @@ only for template pages*/
     /* margin: 0.2em 0; */
 }
 
-.theatre-hero-text-byllis {        
-    font-size: 8.2rem;
-    font-weight: 600;
-    text-align: center;
-    position: absolute;
+.apollonia-header {        
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+.byllis-header {        
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    z-index: -10;
-    /* margin: 0.2em 0; */
+}
+
+.delphi-header {        
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dodoni-header {        
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.epidavros-header {        
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hero-title {
