@@ -50,11 +50,6 @@ p, li {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-li {
-    margin-left: -2rem;
-    padding: 1rem;
-}
-
 .sans {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -399,6 +394,7 @@ only for template pages*/
 
 .footer-item {
     line-height: 3rem;
+    margin: 0;
 }
 
 .footer-link {
@@ -418,6 +414,7 @@ only for template pages*/
 }
 
 .footer-text{
+    font-size: 1.4rem;
     margin: 0;
 }
 
@@ -440,7 +437,7 @@ only for template pages*/
     font-size: 2rem;
     opacity: 0.7;
 
-    margin: 0 .8em;
+    margin: 0 1em;
 }
 
 .social-link:hover
@@ -518,6 +515,15 @@ only for template pages*/
     z-index: -1;
 }
 
+@media (min-width: 350px) {
+    .hero {
+        height: 95vh;
+    }
+
+    .hero-bg-img:before {
+        height: 95vh;
+    }
+}
 
 @media (min-width: 600px) {
     .hero-text {
@@ -762,7 +768,7 @@ only for template pages*/
 =============================================================================================================== */
 
 .theatre-hero {
-    background-image: url(images/Apollonia_05.jpg);
+    background-image: url(images/Apollonia_03.jpg);
     background-repeat: no-repeat;
     background-position: center; 
     /* background-attachment: fixed; */
@@ -777,17 +783,17 @@ only for template pages*/
     background-color: #4b7237;
 
     width: 100%;
-    height: 50vh;
+    height: 70vh;
 
     position: relative;
 }
 
-.theatre-hero-text {        
+.theatre-hero-text-apollonia {        
     font-size: 8.2rem;
     font-weight: 600;
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
   
@@ -822,7 +828,7 @@ only for template pages*/
     justify-content: space-evenly;
     overflow: hidden;
     background-color: #0F170B;
-    border-bottom: solid 1px rgb(62, 63, 62);
+    /* border-bottom: solid 1px rgb(62, 63, 62); */
   }
   
   .tab button {
@@ -833,9 +839,9 @@ only for template pages*/
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 1em 0;
+    padding: 0.75em 0;
     transition: 0.3s;
-    /* margin: 1em 0; */
+    margin: 1em 0;
   }
 
   .tab button:hover {
@@ -844,22 +850,38 @@ only for template pages*/
 
   .tab button.active {
     color: #ddd;
-    border-bottom: solid 4px #BCA736;
+    border-bottom: solid 1px #BCA736;
   }
   
   .tabcontent {
     display: none;
     width: 70%;
-    margin: 2em auto 10em auto;
-    padding: 1em 0;
+    margin: 1em auto 10em auto;
+    /* padding: 1em 0; */
 
     color: #ccc;
     font-family: "Source Sans Pro", sans-serif;
   }
 
+  .tabcontent li {
+        margin-left: -2rem;
+        padding: 1rem;
+  }
+
   .start-tab {
     display: block;
 }
+
+@media (mind-width: 400px) {
+    
+
+
+}
+
+
+/* ============================================================================================================
+    Map Embed
+=============================================================================================================== */
 
 /* from duda.co */
 .map-responsive{
@@ -906,7 +928,7 @@ only for template pages*/
   .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 25%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -943,27 +965,28 @@ only for template pages*/
   .caption-container {
     text-align: center;
     background-color: #0F170B;
-    padding: 2px 16px;
+    /* padding: 2px 16px; */
+    margin: 0 0 4em 0;
     color: white;
   }
   
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
   }
   
-  /* Six columns side by side */
-  .column {
+  /* Six columns side by side - Chris, use Grid instead*/
+  /* .column {
     float: left;
     width: 16.66%;
     
-  }
+  } */
   
   /* Add a transparency effect for thumnbail images */
   .demo {
     opacity: 0.6;
-    height: 10em;
+    height: 8em;
     object-fit: cover;
   }
   
