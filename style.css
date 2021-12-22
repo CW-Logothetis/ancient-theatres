@@ -287,6 +287,7 @@ only for template pages*/
     text-decoration: none;
     font-size: 3.6rem;
     font-weight: 600;
+    padding: 0 0.5em 0.5em 0.5em;
 }
 
 .nav-link:hover,
@@ -911,7 +912,7 @@ only for template pages*/
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 0.75em 0;
+    padding: 0.5em 0;
     transition: 0.3s;
     margin: 1em 0;
   }
@@ -922,13 +923,13 @@ only for template pages*/
 
   .tab button.active {
     color: #ddd;
-    border-bottom: solid 1px #BCA736;
+    border-bottom: solid 3px #BCA736;
   }
   
   .tabcontent {
     display: none;
     width: 85%;
-    margin: 1em auto 1em auto;
+    margin: 1em auto 2em auto;
     /* padding: 1em 0; */
 
     color: #ccc;
