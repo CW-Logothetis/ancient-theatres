@@ -850,9 +850,20 @@ only for template pages*/
     Tabs
 =============================================================================================================== */
 
+.tab-flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    margin: 5em auto;
+    padding: 1em;
+
+    
+}
+
 .tab {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     overflow: hidden;
     background-color: #0F170B;
     /* border-bottom: solid 1px rgb(62, 63, 62); */
@@ -883,8 +894,8 @@ only for template pages*/
   
   .tabcontent {
     display: none;
-    width: 70%;
-    margin: 1em auto 10em auto;
+    width: 85%;
+    margin: 1em auto 1em auto;
     /* padding: 1em 0; */
 
     color: #ccc;
@@ -900,14 +911,38 @@ only for template pages*/
     display: block;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 600px) {
     
-    .tabcontent {
+    .tab-flexbox {
+        border: solid 2px #BCA736;
+        border-radius: 20px;
+      }
+
+}
+
+@media (min-width: 800px) {
+    
+    .tab-flexbox {
+        width: 70%;
+      }
+
+}
+
+@media (min-width: 1200px) {
+    
+    .tab-flexbox {
         width: 60%;
       }
 
 }
 
+@media (min-width: 1450px) {
+    
+    .tab-flexbox {
+        width: 55%;
+      }
+
+}
 
 /* ============================================================================================================
     Map Embed
