@@ -741,20 +741,46 @@ only for template pages*/
     
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
     .map-section {
         width: 90%;
         margin: 0 auto;
     }    
+} */
+
+@media (min-width: 800px) {
+    
+    .map-section {
+        width: 70%;
+        margin: 0 auto;
+        /* background-size: contain; */
+        outline: solid 3px #0F170B;
+        border-radius: 20px;
+      }
+
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
+    
+    .map-section {
+        width: 60%;
+      }
+
+}
+
+@media (min-width: 1450px) {
+    
+    .map-section {
+        width: 55%;
+      }
+
+}
+
+@media (min-width: 1024px) {
     .map-section {
         max-width: 1049px;
         height: 600px;
-        background-size: contain;
-        outline: solid 3px #0F170B;
-        border-radius: 20px;
+        
     }    
 }
 
