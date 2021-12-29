@@ -1136,20 +1136,20 @@ only for template pages*/
   } */
   
   /* Add a transparency effect for thumnbail images */
-  .demo {
+  .thumbnail {
     opacity: 0.6;
     height: 8em;
     object-fit: cover;
   }
   
   .active,
-  .demo:hover {
+  .thumbnail:hover {
     opacity: 1;
   }
 
   @media (min-width: 750px) {
     
-    .demo {
+    .thumbnail {
         height: 14em;
       }
 
