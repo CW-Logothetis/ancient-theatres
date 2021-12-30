@@ -94,6 +94,22 @@ p, li {
 @media (min-width: 600px) {
     .hero-title {
         font-size: 7.2rem;
+        line-height: 9rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2.8rem;
+    }
+
+    .hero-p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .hero-title {
+        font-size: 10rem;
+        line-height: 12rem;
     }
 
     .hero-subtitle {
@@ -119,6 +135,10 @@ p, li {
 
     .hero-p {
         font-size: 3.2rem;
+    }
+
+    p, li {
+        font-size: 1.8rem;
     }
 }
 
@@ -551,11 +571,11 @@ only for template pages*/
 
 @media (min-width: 950px) {
     .hero {
-        height: 90vh;
+        height: 80vh;
     }
 
     .hero-bg-img:before { 
-        height: 90vh;    
+        height: 80vh;    
         opacity: 0.8;
        
     }
@@ -572,7 +592,8 @@ only for template pages*/
 ===================== */
 
 .info {
-    padding: 6.4em 0 3em 0;
+    margin: 6em auto 0 auto;
+    /* padding: 6.4em 0 3em 0; */
     text-align: center;
     position: relative;
 }
@@ -621,8 +642,9 @@ only for template pages*/
 ===================== */
 
 .timeline {
-    background-image: linear-gradient(180deg, rgba(15, 23, 11, 0.5) 5%, rgba(156, 183, 140, 0.1), rgba(15, 23, 11, 0.5) 95%);
-    margin-bottom: 15em;
+    background-image: linear-gradient(180deg, rgba(15, 23, 11, 0.5) 5%, rgba(113, 139, 97, 0.1), rgba(15, 23, 11, 0.5) 95%);
+    margin-bottom: 5em;
+    padding: 10em 0;
 }
 
 
@@ -780,18 +802,17 @@ only for template pages*/
 
 @media (min-width: 1024px) {
     .map-section {
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
         outline: solid 3px #0F170B;
-        border-radius: 20px;
+        /* border-radius: 20px; */
+        margin-bottom: 15em;
     }    
 }
 
 @media (min-width: 1100px) {
     
     .map-section {
-        
-        
         /* background-size: contain; */
         outline: solid 3px #0F170B;
         border-radius: 20px;
@@ -800,7 +821,7 @@ only for template pages*/
 }
 @media (min-width: 1200px) {
     .map-section {
-        width: 60%;
+        width: 70%;
     }
 }
 
@@ -893,13 +914,13 @@ only for template pages*/
 }
 
 .dodoni-header {        
-    top: 75%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .epidavros-header {        
-    top: 75%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -913,14 +934,25 @@ only for template pages*/
     z-index: -1;
 }
 
+@media (min-width: 700px) {
+    .theatre-hero {
+        width: 100%;
+        height: 80vh;
+    } 
+
+    .hero-title {
+        font-size: 12rem;
+    }
+}
+
 @media (min-width: 900px) {
     .theatre-hero {
         width: 100%;
         height: 80vh;
     } 
 
-    .theatre-hero-text {
-        font-size: 12rem;
+    .hero-title {
+        font-size: 16rem;
     }
 }
 
@@ -930,8 +962,8 @@ only for template pages*/
         height: 70vh;
     } 
 
-    .theatre-hero-text {
-        font-size: 12rem;
+    .hero-title {
+        font-size: 18rem;
     }
 }
 
@@ -941,9 +973,10 @@ only for template pages*/
         height: 80vh;
     } 
 
-    .theatre-hero-text {
-        font-size: 12rem;
+    .hero-title {
+        font-size: 20rem;
     }
+
 }
 
 /* ============================================================================================================
