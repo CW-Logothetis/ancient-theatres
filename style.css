@@ -330,6 +330,11 @@ only for template pages*/
 .nav-link:hover,
 .nav-link:focus {
     color: #BCA736;
+    opacity: 1;
+}
+
+.nav-link:focus {
+    outline: #BCA736 solid 1px;
 }
 
 .close-nav {
@@ -446,6 +451,8 @@ only for template pages*/
     
 }
 
+
+
 .footer-main {
     grid-area: main;
     font-size: 1.6rem;
@@ -481,6 +488,7 @@ only for template pages*/
 .social-link:hover
 .social-link:focus {
     color: #4b7237;
+    opacity: 1;
 }
 
 /* @media (min-width: 600px) {
@@ -896,7 +904,7 @@ only for template pages*/
 }
 
 .apollonia-header {        
-    top: 90%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
  }
@@ -1014,8 +1022,14 @@ only for template pages*/
     margin: 1em 0;
   }
 
-  .tab button:hover {
-    color: #4b7237;
+  .tab button:hover,
+  .tab button:focus,
+  .ta button:active {
+    color: #BCA736;
+  }
+
+  .tab button:focus {
+      outline:#BCA736 solid 1px;
   }
 
   .tab button.active {
