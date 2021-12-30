@@ -123,7 +123,7 @@ p, li {
 
 @media (min-width: 900px) {
     .hero-title {
-        font-size: 14rem;
+        font-size: 8rem;
         line-height: 16rem;
         margin: 0;
         padding: 0;
@@ -579,17 +579,17 @@ only for template pages*/
 
 @media (min-width: 950px) {
     .hero {
-        height: 80vh;
+        height: 95vh;
     }
 
     .hero-bg-img:before { 
-        height: 85vh;    
+        height: 95vh;    
         opacity: 0.8;
        
     }
 
     .hero-text {
-        top: 20em;
+        top: 12em;
     }
 
 }
@@ -960,7 +960,7 @@ only for template pages*/
     } 
 
     .hero-title {
-        font-size: 16rem;
+        font-size: 12rem;
     }
 }
 
@@ -971,7 +971,7 @@ only for template pages*/
     } 
 
     .hero-title {
-        font-size: 18rem;
+        font-size: 14rem;
     }
 }
 
@@ -982,7 +982,7 @@ only for template pages*/
     } 
 
     .hero-title {
-        font-size: 20rem;
+        font-size: 16rem;
     }
 
 }
