@@ -14,6 +14,8 @@ openButton.addEventListener("click", () => {
 // -------------                Theatre Tabs            ------------------------
 // -----------------------------------------------------------------------------
 
+ // on load, no tab will be open. This 'clicks' the History tab so it opens as default tab
+ document.getElementById("default-open").click();
 
   function openTab(evt, tabName) {
     // Declare all variables
@@ -36,15 +38,14 @@ openButton.addEventListener("click", () => {
 
     //and add an "active" class to style the tab
     evt.currentTarget.className += " active";
-    
   }
-  // as the above turns off display of all tabs, this sets History to load
-  document.getElementById("default-open").click();
+ 
 
 // -----------------------------------------------------------------------------
 // -------------                Photo Gallery           ------------------------
 // -----------------------------------------------------------------------------
 
+// fn showSlides runs on load, so shows slide 1 (slideIndex=1)
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -63,7 +64,10 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("photographs");
   let thumb = document.getElementsByClassName("thumbnail");
   let captionText = document.getElementById("caption");
+  //last slide, index back to 1
   if (n > slides.length) {slideIndex = 1}
+  console.log(`slideIndex: ${slideIndex}`)
+  //go left to minus index, slide is last slide
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
